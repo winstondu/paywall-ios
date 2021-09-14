@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Paywall",
-            targets: ["Paywall"]
+            targets: ["PaywallWrapper"]
         )
     ],
     dependencies: [
@@ -22,18 +22,25 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
+        .binaryTarget(
             name: "Paywall",
-            dependencies: [
-                .product(name: "TPInAppReceipt", package: "TPInAppReceipt")
-            ],
-            swiftSettings: [
-              .define("SPM")
-            ]
+            path: "./archives/Paywall.xcframework"
+            
+//            swiftSettings: [
+//              .define("SPM")
+//            ]
 //          ),
 //            swiftSettings: [
 //                .unsafeFlags(["-emit-objc-header"])
 //            ]
+        ),
+        .target(
+            name: "PaywallWrapper",
+            dependencies: [
+                "Paywall",
+                .product(name: "TPInAppReceipt", package: "TPInAppReceipt")
+            ],
+            path: "Sources/PaywallWrapper"
         ),
         .testTarget(
             name: "PaywallTests",

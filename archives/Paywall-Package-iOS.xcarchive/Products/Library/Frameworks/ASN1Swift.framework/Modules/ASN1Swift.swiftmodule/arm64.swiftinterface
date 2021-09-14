@@ -1,0 +1,294 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ASN1Swift
+import Foundation
+import Swift
+public typealias ASN1Codable = ASN1Swift.ASN1Decodable & ASN1Swift.ASN1Encodable
+public protocol ASN1Encodable : Swift.Encodable {
+}
+public protocol ASN1Decodable : Swift.Decodable {
+  static var template: ASN1Swift.ASN1Template { get }
+}
+public protocol ASN1CodingKey : Swift.CodingKey {
+  var template: ASN1Swift.ASN1Template { get }
+  var hashValue: Swift.Int { get }
+}
+@inlinable @inline(__always) internal func isHighTag(_ number: Swift.UInt8) -> Swift.Bool {
+	return number == 0x1f
+}
+@inlinable @inline(__always) internal func lastTagNumber(_ byte: Swift.UInt8) -> Swift.Bool {
+	return (byte & 0x80) == 0x1f
+}
+@inlinable @inline(__always) internal func lengthIsShortForm(_ byte: Swift.UInt8) -> Swift.Bool {
+	return (byte & 0x80) == 0
+}
+@inlinable @inline(__always) internal func longFormLength(_ byte: Swift.UInt8) -> Swift.UInt8 {
+	return (byte & 0x7f)
+}
+@inlinable @inline(__always) internal func highBits(_ field: Swift.UInt8, _ cnt: Swift.UInt8) -> Swift.UInt8 {
+	return field >> (UInt8(MemoryLayout.size(ofValue: field))*8 - cnt)
+}
+@inlinable @inline(__always) internal func tlvConstructed(tag: Swift.UInt8) -> Swift.Bool {
+	return tag & 0x20 != 0
+}
+public protocol ASN1UnkeyedDecodingContainerProtocol : Swift.UnkeyedDecodingContainer {
+  var rawData: Foundation.Data { get }
+  var valueData: Foundation.Data { get }
+  mutating func decode(_ type: Swift.String.Type, template: ASN1Swift.ASN1Template) throws -> Swift.String
+  mutating func decode<T>(_ type: T.Type, template: ASN1Swift.ASN1Template) throws -> T where T : Swift.Decodable
+  mutating func nestedContainer<NestedKey>(keyedBy type: NestedKey.Type, for template: ASN1Swift.ASN1Template) throws -> Swift.KeyedDecodingContainer<NestedKey> where NestedKey : Swift.CodingKey
+  mutating func nestedUnkeyedContainer(for template: ASN1Swift.ASN1Template) throws -> Swift.UnkeyedDecodingContainer
+  mutating func skip(template: ASN1Swift.ASN1Template) throws
+}
+open class ASN1Decoder {
+  public init()
+  open func decode<T>(_ type: T.Type, from data: Foundation.Data, template: ASN1Swift.ASN1Template? = nil) throws -> T where T : ASN1Swift.ASN1Decodable
+  @objc deinit
+}
+public protocol ASN1DecoderProtocol : Swift.Decoder {
+  var dataToDecode: Foundation.Data { get }
+  func extractValueData() throws -> Foundation.Data
+}
+@_hasMissingDesignatedInitializers public class ASN1Template {
+  public func implicit(tag: ASN1Swift.ASN1Tag) -> ASN1Swift.ASN1Template
+  public func explicit(tag: ASN1Swift.ASN1Tag) -> ASN1Swift.ASN1Template
+  public func constructed() -> ASN1Swift.ASN1Template
+  @objc deinit
+}
+extension ASN1Template {
+  public static func contextSpecific(_ id: ASN1Swift.ASN1Tag) -> ASN1Swift.ASN1Template
+  public static func universal(_ tag: ASN1Swift.ASN1Tag) -> ASN1Swift.ASN1Template
+  public var stringEncoding: Swift.String.Encoding {
+    get
+  }
+}
+public typealias ASN1Tag = Swift.UInt8
+public struct ASN1SkippedField : ASN1Swift.ASN1Decodable {
+  public var rawData: Foundation.Data
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ASN1Null : ASN1Swift.ASN1Decodable {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ASN1Identifier {
+  public struct Modifiers {
+    public static let methodMask: Swift.UInt8
+    public static let primitiv: Swift.UInt8
+    public static let constructed: Swift.UInt8
+    public static let classMask: Swift.UInt8
+    public static let universal: Swift.UInt8
+    public static let application: Swift.UInt8
+    public static let contextSpecific: Swift.UInt8
+    public static let `private`: Swift.UInt8
+    public static let any: Swift.UInt32
+  }
+  public struct Tag {
+    public static let tagMask: Swift.UInt8
+    public static let tagNumMask: Swift.UInt8
+    public static let endOfContent: ASN1Swift.ASN1Tag
+    public static let boolean: ASN1Swift.ASN1Tag
+    public static let integer: ASN1Swift.ASN1Tag
+    public static let bitString: ASN1Swift.ASN1Tag
+    public static let octetString: ASN1Swift.ASN1Tag
+    public static let null: ASN1Swift.ASN1Tag
+    public static let objectIdentifier: ASN1Swift.ASN1Tag
+    public static let objectDescriptor: ASN1Swift.ASN1Tag
+    public static let external: ASN1Swift.ASN1Tag
+    public static let read: ASN1Swift.ASN1Tag
+    public static let enumerated: ASN1Swift.ASN1Tag
+    public static let embeddedPdv: ASN1Swift.ASN1Tag
+    public static let utf8String: ASN1Swift.ASN1Tag
+    public static let relativeOid: ASN1Swift.ASN1Tag
+    public static let sequence: ASN1Swift.ASN1Tag
+    public static let set: ASN1Swift.ASN1Tag
+    public static let numericString: ASN1Swift.ASN1Tag
+    public static let printableString: ASN1Swift.ASN1Tag
+    public static let t61String: ASN1Swift.ASN1Tag
+    public static let videotexString: ASN1Swift.ASN1Tag
+    public static let ia5String: ASN1Swift.ASN1Tag
+    public static let utcTime: ASN1Swift.ASN1Tag
+    public static let generalizedTime: ASN1Swift.ASN1Tag
+    public static let graphicString: ASN1Swift.ASN1Tag
+    public static let visibleString: ASN1Swift.ASN1Tag
+    public static let generalString: ASN1Swift.ASN1Tag
+    public static let universalString: ASN1Swift.ASN1Tag
+    public static let characterString: ASN1Swift.ASN1Tag
+    public static let bmpString: ASN1Swift.ASN1Tag
+    public static let highTag: ASN1Swift.ASN1Tag
+    public init()
+    public static func custom(raw: Swift.UInt8) -> ASN1Swift.ASN1Tag
+  }
+  public enum Method : Swift.UInt8 {
+    case primitive
+    case constructed
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum Class : Swift.UInt8, Swift.RawRepresentable {
+    case universal
+    case application
+    case contextSpecific
+    case `private`
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
+extension DecodingError {
+  public static func _typeMismatch(at path: [Swift.CodingKey], expectation: Any.Type, reality: Any) -> Swift.DecodingError
+}
+extension String : ASN1Swift.ASN1Decodable {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+extension Int : ASN1Swift.ASN1Decodable {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+extension Int32 : ASN1Swift.ASN1Decodable {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+extension Data : ASN1Swift.ASN1Decodable {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+extension String.Encoding {
+  public var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+public enum OID : Swift.String {
+  case sha1
+  case sha256
+  case sha1WithRSAEncryption
+  case sha256WithRSAEncryption
+  case data
+  case signedData
+  case envelopedData
+  case signedAndEnvelopedData
+  case digestedData
+  case encryptedData
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension OID {
+  @available(iOS 10.0, *)
+  public func encryptionAlgorithm() -> Security.SecKeyAlgorithm
+}
+public struct PKCS7Container : ASN1Swift.ASN1Decodable {
+  public var oid: ASN1Swift.ASN1SkippedField
+  public var signedData: ASN1Swift.PKCS7Container.SignedData {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+extension PKCS7Container {
+  public struct SignedData : ASN1Swift.ASN1Decodable {
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+    public var version: Swift.Int32
+    public var alg: ASN1Swift.PKCS7Container.DigestAlgorithmIdentifiersContainer
+    public var contentInfo: ASN1Swift.PKCS7Container.ContentInfo
+    public var certificates: ASN1Swift.PKCS7Container.CetrificatesContaner
+    public var signerInfos: ASN1Swift.PKCS7Container.SignerInfos
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct DigestAlgorithmIdentifiersContainer : ASN1Swift.ASN1Decodable {
+    public var items: [ASN1Swift.PKCS7Container.DigestAlgorithmIdentifiersContainer.Item]
+    public init(from decoder: Swift.Decoder) throws
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+    public struct Item : ASN1Swift.ASN1Decodable {
+      public var algorithm: Swift.String
+      public var parameters: ASN1Swift.ASN1Null
+      public static var template: ASN1Swift.ASN1Template {
+        get
+      }
+      public init(from decoder: Swift.Decoder) throws
+    }
+  }
+  public struct ContentInfo : ASN1Swift.ASN1Decodable {
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+    public var oid: ASN1Swift.ASN1SkippedField
+    public var payload: ASN1Swift.ASN1SkippedField
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public struct Certificate : ASN1Swift.ASN1Decodable {
+    public var cert: ASN1Swift.PKCS7Container.TPSCertificate
+    public var signatureAlgorithm: ASN1Swift.ASN1SkippedField
+    public var signatureValue: Foundation.Data
+    public var rawData: Foundation.Data
+    public init(from decoder: Swift.Decoder) throws
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+  }
+  public struct TPSCertificate : ASN1Swift.ASN1Decodable {
+    public var version: Swift.Int
+    public var serialNumber: Swift.Int
+    public var signature: ASN1Swift.ASN1SkippedField
+    public var issuer: ASN1Swift.ASN1SkippedField
+    public var validity: ASN1Swift.ASN1SkippedField
+    public var subject: ASN1Swift.ASN1SkippedField
+    public var subjectPublicKeyInfo: Foundation.Data
+    public var extensions: ASN1Swift.ASN1SkippedField
+    public init(from decoder: Swift.Decoder) throws
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+  }
+  public struct CetrificatesContaner : ASN1Swift.ASN1Decodable {
+    public let certificates: [ASN1Swift.PKCS7Container.Certificate]
+    public init(from decoder: Swift.Decoder) throws
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+  }
+  public struct SignerInfos : ASN1Swift.ASN1Decodable {
+    public static var template: ASN1Swift.ASN1Template {
+      get
+    }
+    public var version: Swift.Int
+    public var signerIdentifier: ASN1Swift.ASN1SkippedField
+    public var digestAlgorithm: ASN1Swift.ASN1SkippedField
+    public var digestEncryptionAlgorithm: ASN1Swift.ASN1SkippedField
+    public var encryptedDigest: Foundation.Data
+    public init(from decoder: Swift.Decoder) throws
+  }
+}
+extension PKCS7Container {
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+extension ASN1Swift.ASN1Identifier.Method : Swift.Equatable {}
+extension ASN1Swift.ASN1Identifier.Method : Swift.Hashable {}
+extension ASN1Swift.ASN1Identifier.Method : Swift.RawRepresentable {}
+extension ASN1Swift.ASN1Identifier.Class : Swift.Equatable {}
+extension ASN1Swift.ASN1Identifier.Class : Swift.Hashable {}
+extension ASN1Swift.OID : Swift.Equatable {}
+extension ASN1Swift.OID : Swift.Hashable {}
+extension ASN1Swift.OID : Swift.RawRepresentable {}

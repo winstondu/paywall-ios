@@ -1,0 +1,221 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TPInAppReceipt
+import ASN1Swift
+import CommonCrypto
+import Foundation
+import StoreKit
+import Swift
+import UIKit
+extension Data {
+  public var bytes: Swift.Array<Swift.UInt8> {
+    get
+  }
+}
+extension Date {
+  public func rfc3339date(fromString string: Swift.String) -> Foundation.Date?
+}
+extension String {
+  public func rfc3339date() -> Foundation.Date?
+}
+@_hasMissingDesignatedInitializers @available(tvOS 12.0, macOS 10.14, iOS 12.0, *)
+public class SKSubscriptionGroup {
+  @objc deinit
+}
+public typealias GroupIdentifier = Swift.String
+@available(tvOS 12.0, iOS 12.0, macOS 10.14, *)
+extension SKProductsResponse {
+  public var subscriptionGroup: TPInAppReceipt.SKSubscriptionGroup {
+    get
+  }
+  public var subscriptionGroups: [TPInAppReceipt.GroupIdentifier : TPInAppReceipt.SKSubscriptionGroup] {
+    get
+  }
+}
+@available(tvOS 12.0, macOS 10.14, *)
+extension InAppReceipt {
+  @available(watchOSApplicationExtension 6.2, *)
+  public static func refresh(completion: @escaping TPInAppReceipt.IAPRefreshRequestResult)
+  @available(iOS 12.0, *)
+  public func isEligibleForIntroductoryOffer(for group: TPInAppReceipt.SKSubscriptionGroup) -> Swift.Bool
+}
+public typealias IAPRefreshRequestResult = ((Swift.Error?) -> ())
+public typealias SubscriptionGroup = Swift.Set<Swift.String>
+extension InAppReceipt {
+  public func isEligibleForIntroductoryOffer(for group: TPInAppReceipt.SubscriptionGroup) -> Swift.Bool
+  public func isEligibleForIntroductoryOffer(for productIdentifier: Swift.String) -> Swift.Bool
+}
+public enum IARError : Swift.Error {
+  case initializationFailed(reason: TPInAppReceipt.IARError.ReceiptInitializationFailureReason)
+  case validationFailed(reason: TPInAppReceipt.IARError.ValidationFailureReason)
+  case purchaseExpired
+  public enum ReceiptInitializationFailureReason {
+    case appStoreReceiptNotFound
+    case pkcs7ParsingError
+    case dataIsInvalid
+    public static func == (a: TPInAppReceipt.IARError.ReceiptInitializationFailureReason, b: TPInAppReceipt.IARError.ReceiptInitializationFailureReason) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ValidationFailureReason {
+    case hashValidation
+    case signatureValidation(TPInAppReceipt.IARError.SignatureValidationFailureReason)
+    case bundleIdentifierVerification
+    case bundleVersionVerification
+  }
+  public enum SignatureValidationFailureReason {
+    case appleIncRootCertificateNotFound
+    case unableToLoadAppleIncRootCertificate
+    case unableToLoadAppleIncPublicKey
+    case unableToLoadiTunesCertificate
+    case unableToLoadiTunesPublicKey
+    case unableToLoadWorldwideDeveloperCertificate
+    case unableToLoadAppleIncPublicSecKey
+    case receiptIsNotSigned
+    case receiptSignedDataNotFound
+    case receiptDataNotFound
+    case signatureNotFound
+    case invalidSignature
+    case invalidCertificateChainOfTrust
+    public static func == (a: TPInAppReceipt.IARError.SignatureValidationFailureReason, b: TPInAppReceipt.IARError.SignatureValidationFailureReason) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct InAppPurchase {
+  public enum `Type` : Swift.Int32 {
+    case unknown
+    case nonConsumable
+    case consumable
+    case nonRenewingSubscription
+    case autoRenewableSubscription
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  public var productIdentifier: Swift.String
+  public var productType: TPInAppReceipt.InAppPurchase.`Type`
+  public var transactionIdentifier: Swift.String
+  public var originalTransactionIdentifier: Swift.String
+  public var purchaseDate: Foundation.Date
+  public var originalPurchaseDate: Foundation.Date!
+  public var subscriptionExpirationDate: Foundation.Date?
+  public var cancellationDate: Foundation.Date?
+  public var subscriptionTrialPeriod: Swift.Bool
+  public var subscriptionIntroductoryPricePeriod: Swift.Bool
+  public var webOrderLineItemID: Swift.Int?
+  public var promotionalOfferIdentifier: Swift.String?
+  public var quantity: Swift.Int
+}
+extension InAppPurchase {
+  public var isRenewableSubscription: Swift.Bool {
+    get
+  }
+  public func isActiveAutoRenewableSubscription(forDate date: Foundation.Date) -> Swift.Bool
+}
+extension InAppPurchase : ASN1Swift.ASN1Decodable {
+  public init(from decoder: Swift.Decoder) throws
+  public static var template: ASN1Swift.ASN1Template {
+    get
+  }
+}
+public struct InAppReceiptField {
+}
+public class InAppReceipt {
+  convenience public init() throws
+  public init(receiptData: Foundation.Data, rootCertPath: Swift.String? = nil) throws
+  @objc deinit
+}
+extension InAppReceipt {
+  public var bundleIdentifier: Swift.String {
+    get
+  }
+  public var appVersion: Swift.String {
+    get
+  }
+  public var originalAppVersion: Swift.String {
+    get
+  }
+  public var purchases: [TPInAppReceipt.InAppPurchase] {
+    get
+  }
+  public var autoRenewablePurchases: [TPInAppReceipt.InAppPurchase] {
+    get
+  }
+  public var activeAutoRenewableSubscriptionPurchases: [TPInAppReceipt.InAppPurchase] {
+    get
+  }
+  public var expirationDate: Foundation.Date? {
+    get
+  }
+  public var hasPurchases: Swift.Bool {
+    get
+  }
+  public var hasActiveAutoRenewablePurchases: Swift.Bool {
+    get
+  }
+  public var creationDate: Foundation.Date {
+    get
+  }
+  public var ageRating: Swift.String {
+    get
+  }
+  public var base64: Swift.String {
+    get
+  }
+  public func originalTransactionIdentifier(ofProductIdentifier productIdentifier: Swift.String) -> Swift.String?
+  public func containsPurchase(ofProductIdentifier productIdentifier: Swift.String) -> Swift.Bool
+  public func purchases(ofProductIdentifier productIdentifier: Swift.String, sortedBy sort: ((TPInAppReceipt.InAppPurchase, TPInAppReceipt.InAppPurchase) -> Swift.Bool)? = nil) -> [TPInAppReceipt.InAppPurchase]
+  public func activeAutoRenewableSubscriptionPurchases(ofProductIdentifier productIdentifier: Swift.String, forDate date: Foundation.Date) -> TPInAppReceipt.InAppPurchase?
+  public func lastAutoRenewableSubscriptionPurchase(ofProductIdentifier productIdentifier: Swift.String) -> TPInAppReceipt.InAppPurchase?
+  public func hasActiveAutoRenewableSubscription(ofProductIdentifier productIdentifier: Swift.String, forDate date: Foundation.Date) -> Swift.Bool
+}
+extension InAppReceipt {
+  public var signature: Foundation.Data? {
+    get
+  }
+  public var worldwideDeveloperCertificateData: Foundation.Data? {
+    get
+  }
+  public var iTunesCertificateData: Foundation.Data? {
+    get
+  }
+  public var iTunesPublicKeyData: Foundation.Data? {
+    get
+  }
+  public var payloadRawData: Foundation.Data {
+    get
+  }
+}
+extension InAppReceipt {
+  public static func receipt(from data: Foundation.Data) throws -> TPInAppReceipt.InAppReceipt
+  public static func localReceipt() throws -> TPInAppReceipt.InAppReceipt
+}
+extension Bundle {
+  public func appStoreReceiptData() throws -> Foundation.Data
+  public func appStoreReceiptBase64() throws -> Swift.String
+  public class func lookUp(forResource name: Swift.String, ofType ext: Swift.String?) -> Swift.String?
+}
+extension InAppReceipt {
+  public func verify() throws
+  public func verifyHash() throws
+  public func verifyBundleIdentifierAndVersion() throws
+  public func verifySignature() throws
+  @available(macOS 10.12, iOS 10.0, tvOS 10.0, watchOS 5.0, *)
+  public func checkChainOfTrust() throws
+  @available(macOS 10.12, iOS 10.0, tvOS 10.0, watchOS 3.0, *)
+  public func checkSignatureValidity() throws
+}
+extension TPInAppReceipt.IARError.ReceiptInitializationFailureReason : Swift.Equatable {}
+extension TPInAppReceipt.IARError.ReceiptInitializationFailureReason : Swift.Hashable {}
+extension TPInAppReceipt.IARError.SignatureValidationFailureReason : Swift.Equatable {}
+extension TPInAppReceipt.IARError.SignatureValidationFailureReason : Swift.Hashable {}
+extension TPInAppReceipt.InAppPurchase.`Type` : Swift.Equatable {}
+extension TPInAppReceipt.InAppPurchase.`Type` : Swift.Hashable {}
+extension TPInAppReceipt.InAppPurchase.`Type` : Swift.RawRepresentable {}

@@ -1,0 +1,172 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Paywall
+import AVFoundation
+import CloudKit
+import Foundation
+import QuartzCore
+import SafariServices
+import StoreKit
+import Swift
+import TPInAppReceipt
+import UIKit
+import WebKit
+extension Paywall {
+  public enum StandardEvent {
+    case deepLinkOpen(deepLinkUrl: Foundation.URL)
+    case onboardingStart
+    case onboardingComplete
+    case pushNotificationReceive(superwallId: Swift.String? = nil)
+    case pushNotificationOpen(superwallId: Swift.String? = nil)
+    case coreSessionStart
+    case coreSessionAbandon
+    case coreSessionComplete
+    case signUp
+    case logIn
+    case logOut
+    case userAttributes(standard: [Paywall.Paywall.StandardUserAttributeKey : Any?], custom: [Swift.String : Any?])
+    case base(name: Swift.String, params: [Swift.String : Any])
+  }
+  public enum StandardEventName : Swift.String {
+    case deepLinkOpen
+    case onboardingStart
+    case onboardingComplete
+    case pushNotificationReceive
+    case pushNotificationOpen
+    case coreSessionStart
+    case coreSessionAbandon
+    case coreSessionComplete
+    case signUp
+    case logIn
+    case logOut
+    case userAttributes
+    case base
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum StandardUserAttributeKey : Swift.String {
+    case id
+    case applicationInstalledAt
+    case firstName
+    case lastName
+    case email
+    case phone
+    case fullPhone
+    case phoneCountryCode
+    case fcmToken
+    case apnsToken
+    case createdAt
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum StandardUserAttribute {
+    case id(_: Swift.String)
+    case firstName(_: Swift.String)
+    case lastName(_: Swift.String)
+    case email(_: Swift.String)
+    case phone(_: Swift.String)
+    case fullPhone(_: Swift.String)
+    case phoneCountryCode(_: Swift.String)
+    case fcmToken(_: Swift.String)
+    case apnsToken(_: Swift.String)
+    case createdAt(_: Foundation.Date)
+  }
+  public enum EventName : Swift.String {
+    case appInstall
+    case appOpen
+    case appClose
+    case paywallOpen
+    case paywallClose
+    case transactionStart
+    case transactionFail
+    case transactionAbandon
+    case transactionComplete
+    case subscriptionStart
+    case freeTrialStart
+    case transactionRestore
+    case nonRecurringProductPurchase
+    case paywallResponseLoadStart
+    case paywallResponseLoadFail
+    case paywallResponseLoadComplete
+    case paywallWebviewLoadStart
+    case paywallWebviewLoadFail
+    case paywallWebviewLoadComplete
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static func track(_ event: Paywall.Paywall.StandardEvent, _ params: [Swift.String : Any] = [:])
+  @objc public static func track(_ name: Swift.String, _ params: [Swift.String : Any])
+  @objc public static func track(name: Swift.String, params: Foundation.NSDictionary? = [:])
+  public static func setUserAttributes(_ standard: Paywall.Paywall.StandardUserAttribute..., custom: [Swift.String : Any?] = [:])
+  @objc public static func setUserAttributesDictionary(attributes: Foundation.NSDictionary = [:])
+}
+@objc public protocol PaywallDelegate {
+  @objc func userDidInitiateCheckout(for product: StoreKit.SKProduct)
+  @objc func shouldTryToRestore()
+  @objc func shouldPresentPaywall() -> Swift.Bool
+  @objc optional func didReceiveCustomEvent(withName name: Swift.String)
+  @objc optional func willDismissPaywall()
+  @objc optional func willPresentPaywall()
+  @objc optional func didDismissPaywall()
+  @objc optional func didPresentPaywall()
+  @objc optional func willOpenURL(url: Foundation.URL)
+  @objc optional func willOpenDeepLink(url: Foundation.URL)
+  @objc optional func shouldTrack(event: Swift.String, params: [Swift.String : Any])
+}
+@objc @_hasMissingDesignatedInitializers public class Paywall : ObjectiveC.NSObject {
+  @objc public static var debugMode: Swift.Bool
+  public enum PaywallNetworkEnvironment {
+    case release
+    case releaseCandidate
+    case developer
+    public static func == (a: Paywall.Paywall.PaywallNetworkEnvironment, b: Paywall.Paywall.PaywallNetworkEnvironment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static var networkEnvironment: Paywall.Paywall.PaywallNetworkEnvironment
+  @objc public static var delegate: Paywall.PaywallDelegate?
+  public typealias PurchaseCompletionBlock = (Swift.Bool) -> ()
+  public typealias FallbackBlock = () -> ()
+  public static func launchDebugger(toPaywall paywallId: Swift.String? = nil)
+  @objc public static func load(completion: ((Swift.Bool) -> ())? = nil)
+  @discardableResult
+  @objc public static func configure(apiKey: Swift.String, userId: Swift.String? = nil) -> Paywall.Paywall
+  @discardableResult
+  @objc public static func identify(userId: Swift.String) -> Paywall.Paywall
+  @discardableResult
+  @objc public static func reset() -> Paywall.Paywall
+  @objc public static func dismiss(_ completion: (() -> ())? = nil)
+  @objc public static func present(cached: Swift.Bool, presentationCompletion: (() -> ())? = nil, purchaseCompletion: Paywall.Paywall.PurchaseCompletionBlock? = nil)
+  @objc public static func present(presentationCompletion: (() -> ())? = nil, purchaseCompletion: Paywall.Paywall.PurchaseCompletionBlock? = nil)
+  @objc public static func present(purchaseCompletion: Paywall.Paywall.PurchaseCompletionBlock? = nil)
+  @objc public static func present(cached: Swift.Bool)
+  @objc public static func present()
+  @objc public static func present(on viewController: UIKit.UIViewController? = nil, cached: Swift.Bool = true, presentationCompletion: (() -> ())? = nil, purchaseCompletion: Paywall.Paywall.PurchaseCompletionBlock? = nil, fallback: Paywall.Paywall.FallbackBlock? = nil)
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension Paywall : StoreKit.SKPaymentTransactionObserver {
+  @objc dynamic public func paymentQueue(_ queue: StoreKit.SKPaymentQueue, updatedTransactions transactions: [StoreKit.SKPaymentTransaction])
+}
+extension Paywall.Paywall.StandardEventName : Swift.Equatable {}
+extension Paywall.Paywall.StandardEventName : Swift.Hashable {}
+extension Paywall.Paywall.StandardEventName : Swift.RawRepresentable {}
+extension Paywall.Paywall.StandardUserAttributeKey : Swift.Equatable {}
+extension Paywall.Paywall.StandardUserAttributeKey : Swift.Hashable {}
+extension Paywall.Paywall.StandardUserAttributeKey : Swift.RawRepresentable {}
+extension Paywall.Paywall.EventName : Swift.Equatable {}
+extension Paywall.Paywall.EventName : Swift.Hashable {}
+extension Paywall.Paywall.EventName : Swift.RawRepresentable {}
+extension Paywall.Paywall.PaywallNetworkEnvironment : Swift.Equatable {}
+extension Paywall.Paywall.PaywallNetworkEnvironment : Swift.Hashable {}
