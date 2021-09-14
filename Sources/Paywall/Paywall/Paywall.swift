@@ -3,6 +3,9 @@ import Foundation
 import StoreKit
 import TPInAppReceipt
 
+
+
+
 /// Methods for managing important Paywall lifecycle events. For example, telling the developer when to initiate checkout on a specific `SKProduct` and when to try to restore a transaction. Also includes hooks for you to log important analytics events to your product analytics tool.
 @objc public protocol PaywallDelegate: AnyObject {
     

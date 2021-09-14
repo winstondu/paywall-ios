@@ -1,0 +1,1406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Paywall::PaywallPackageTests::ProductTarget" /* PaywallPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_154 /* Build configuration list for PBXAggregateTarget "PaywallPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_157 /* PBXTargetDependency */,
+			);
+			name = PaywallPackageTests;
+			productName = PaywallPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		D35B72D826F0865400322C6A /* PaywallAssets.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D35B72CF26F0846B00322C6A /* PaywallAssets.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D35B72DA26F0870600322C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BC732A26F07E6C00F91C87 /* Assets.xcassets */; };
+		D35B72DB26F0888F00322C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BC732A26F07E6C00F91C87 /* Assets.xcassets */; };
+		D3BC732C26F07EEE00F91C87 /* BundleFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC732B26F07EEE00F91C87 /* BundleFinder.swift */; };
+		OBJ_100 /* ASN1Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* ASN1Types.swift */; };
+		OBJ_101 /* DecodingError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* DecodingError+Extensions.swift */; };
+		OBJ_102 /* Foundation+ASN1Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Foundation+ASN1Coder.swift */; };
+		OBJ_103 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* PKCS7.swift */; };
+		OBJ_110 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Package.swift */; };
+		OBJ_116 /* SWBounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* SWBounceButton.swift */; };
+		OBJ_117 /* SWConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* SWConsoleViewController.swift */; };
+		OBJ_118 /* SWDebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SWDebugManager.swift */; };
+		OBJ_119 /* SWDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SWDebugViewController.swift */; };
+		OBJ_120 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Debug.swift */; };
+		OBJ_121 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Example.swift */; };
+		OBJ_122 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Extensions.swift */; };
+		OBJ_123 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SwiftyJSON.swift */; };
+		OBJ_124 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Device.swift */; };
+		OBJ_125 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Network.swift */; };
+		OBJ_126 /* PaywallEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* PaywallEvents.swift */; };
+		OBJ_127 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* StoreKitManager.swift */; };
+		OBJ_128 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Types.swift */; };
+		OBJ_129 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Events.swift */; };
+		OBJ_130 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Paywall.swift */; };
+		OBJ_131 /* SWPaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* SWPaywallViewController.swift */; };
+		OBJ_132 /* Shimmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Shimmer.swift */; };
+		OBJ_133 /* ShimmeringLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* ShimmeringLayer.swift */; };
+		OBJ_134 /* ShimmeringMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ShimmeringMaskLayer.swift */; };
+		OBJ_135 /* ShimmeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ShimmeringView.swift */; };
+		OBJ_136 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Cache.swift */; };
+		OBJ_137 /* Dictionary+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Dictionary+Cache.swift */; };
+		OBJ_138 /* EventsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* EventsQueue.swift */; };
+		OBJ_139 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Store.swift */; };
+		OBJ_140 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* String+MD5.swift */; };
+		OBJ_142 /* TPInAppReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TPInAppReceipt::TPInAppReceipt::Product" /* TPInAppReceipt.framework */; };
+		OBJ_143 /* ASN1Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */; };
+		OBJ_152 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_163 /* PaywallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* PaywallTests.swift */; };
+		OBJ_165 /* Paywall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Paywall::Paywall::Product" /* Paywall.framework */; };
+		OBJ_166 /* TPInAppReceipt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "TPInAppReceipt::TPInAppReceipt::Product" /* TPInAppReceipt.framework */; };
+		OBJ_167 /* ASN1Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */; };
+		OBJ_175 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Data+Extension.swift */; };
+		OBJ_176 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Date+Extension.swift */; };
+		OBJ_177 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Extras.swift */; };
+		OBJ_178 /* IARError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* IARError.swift */; };
+		OBJ_179 /* InAppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* InAppPurchase.swift */; };
+		OBJ_180 /* InAppReceipt+ASN1Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* InAppReceipt+ASN1Decodable.swift */; };
+		OBJ_181 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* InAppReceipt.swift */; };
+		OBJ_182 /* InAppReceiptPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* InAppReceiptPayload.swift */; };
+		OBJ_183 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Initialization.swift */; };
+		OBJ_184 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Validation.swift */; };
+		OBJ_186 /* ASN1Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */; };
+		OBJ_193 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Package.swift */; };
+		OBJ_90 /* ASN1Coder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* ASN1Coder.swift */; };
+		OBJ_91 /* ASN1Decoder+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* ASN1Decoder+Extras.swift */; };
+		OBJ_92 /* ASN1Decoder+KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* ASN1Decoder+KeyedDecodingContainer.swift */; };
+		OBJ_93 /* ASN1Decoder+SingleValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* ASN1Decoder+SingleValueContainer.swift */; };
+		OBJ_94 /* ASN1Decoder+Unboxing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* ASN1Decoder+Unboxing.swift */; };
+		OBJ_95 /* ASN1Decoder+UnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* ASN1Decoder+UnkeyedDecodingContainer.swift */; };
+		OBJ_96 /* ASN1Decoder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ASN1Decoder+Utils.swift */; };
+		OBJ_97 /* ASN1Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* ASN1Decoder.swift */; };
+		OBJ_98 /* ASN1Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* ASN1Serialization.swift */; };
+		OBJ_99 /* ASN1Templates.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ASN1Templates.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3BC730326F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TPInAppReceipt::TPInAppReceipt";
+			remoteInfo = TPInAppReceipt;
+		};
+		D3BC730426F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ASN1Swift::ASN1Swift";
+			remoteInfo = ASN1Swift;
+		};
+		D3BC730526F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ASN1Swift::ASN1Swift";
+			remoteInfo = ASN1Swift;
+		};
+		D3BC730626F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Paywall::Paywall";
+			remoteInfo = Paywall;
+		};
+		D3BC730726F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "TPInAppReceipt::TPInAppReceipt";
+			remoteInfo = TPInAppReceipt;
+		};
+		D3BC730826F079E700F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ASN1Swift::ASN1Swift";
+			remoteInfo = ASN1Swift;
+		};
+		D3BC730926F079E800F91C87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Paywall::PaywallTests";
+			remoteInfo = PaywallTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D35B72D726F0864D00322C6A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				D35B72D826F0865400322C6A /* PaywallAssets.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		"ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASN1Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35B72CF26F0846B00322C6A /* PaywallAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaywallAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35B72D126F0846B00322C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3BC732A26F07E6C00F91C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3BC732B26F07EEE00F91C87 /* BundleFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFinder.swift; sourceTree = "<group>"; };
+		OBJ_10 /* SWBounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWBounceButton.swift; sourceTree = "<group>"; };
+		OBJ_11 /* SWConsoleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWConsoleViewController.swift; sourceTree = "<group>"; };
+		OBJ_12 /* SWDebugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDebugManager.swift; sourceTree = "<group>"; };
+		OBJ_13 /* SWDebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWDebugViewController.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		OBJ_16 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		OBJ_18 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		OBJ_22 /* PaywallEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallEvents.swift; sourceTree = "<group>"; };
+		OBJ_23 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
+		OBJ_28 /* SWPaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWPaywallViewController.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
+		OBJ_31 /* ShimmeringLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringLayer.swift; sourceTree = "<group>"; };
+		OBJ_32 /* ShimmeringMaskLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringMaskLayer.swift; sourceTree = "<group>"; };
+		OBJ_33 /* ShimmeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringView.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Dictionary+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Cache.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* EventsQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsQueue.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		OBJ_39 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		OBJ_42 /* PaywallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallTests.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_47 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		OBJ_48 /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
+		OBJ_49 /* IARError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IARError.swift; sourceTree = "<group>"; };
+		OBJ_50 /* InAppPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchase.swift; sourceTree = "<group>"; };
+		OBJ_51 /* InAppReceipt+ASN1Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InAppReceipt+ASN1Decodable.swift"; sourceTree = "<group>"; };
+		OBJ_52 /* InAppReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
+		OBJ_53 /* InAppReceiptPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReceiptPayload.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		OBJ_57 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brian/better-paywall/paywall-ios/.build/checkouts/TPInAppReceipt/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* ASN1Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Coder.swift; sourceTree = "<group>"; };
+		OBJ_61 /* ASN1Decoder+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+Extras.swift"; sourceTree = "<group>"; };
+		OBJ_62 /* ASN1Decoder+KeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+KeyedDecodingContainer.swift"; sourceTree = "<group>"; };
+		OBJ_63 /* ASN1Decoder+SingleValueContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+SingleValueContainer.swift"; sourceTree = "<group>"; };
+		OBJ_64 /* ASN1Decoder+Unboxing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+Unboxing.swift"; sourceTree = "<group>"; };
+		OBJ_65 /* ASN1Decoder+UnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+UnkeyedDecodingContainer.swift"; sourceTree = "<group>"; };
+		OBJ_66 /* ASN1Decoder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASN1Decoder+Utils.swift"; sourceTree = "<group>"; };
+		OBJ_67 /* ASN1Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Decoder.swift; sourceTree = "<group>"; };
+		OBJ_68 /* ASN1Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Serialization.swift; sourceTree = "<group>"; };
+		OBJ_69 /* ASN1Templates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Templates.swift; sourceTree = "<group>"; };
+		OBJ_70 /* ASN1Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASN1Types.swift; sourceTree = "<group>"; };
+		OBJ_71 /* DecodingError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_72 /* Foundation+ASN1Coder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+ASN1Coder.swift"; sourceTree = "<group>"; };
+		OBJ_74 /* PKCS7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCS7.swift; sourceTree = "<group>"; };
+		OBJ_75 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brian/better-paywall/paywall-ios/.build/checkouts/ASN1Swift/Package.swift"; sourceTree = "<group>"; };
+		OBJ_81 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
+		OBJ_83 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = SOURCE_ROOT; };
+		OBJ_84 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"Paywall::Paywall::Product" /* Paywall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Paywall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Paywall::PaywallTests::Product" /* PaywallTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = PaywallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"TPInAppReceipt::TPInAppReceipt::Product" /* TPInAppReceipt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TPInAppReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D35B72CC26F0846B00322C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_142 /* TPInAppReceipt.framework in Frameworks */,
+				OBJ_143 /* ASN1Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_165 /* Paywall.framework in Frameworks */,
+				OBJ_166 /* TPInAppReceipt.framework in Frameworks */,
+				OBJ_167 /* ASN1Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_186 /* ASN1Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D35B72D026F0846B00322C6A /* PaywallAssets */ = {
+			isa = PBXGroup;
+			children = (
+				D35B72D126F0846B00322C6A /* Info.plist */,
+			);
+			path = PaywallAssets;
+			sourceTree = "<group>";
+		};
+		OBJ_14 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* Debug.swift */,
+				OBJ_16 /* Example.swift */,
+				OBJ_17 /* Extensions.swift */,
+				OBJ_18 /* SwiftyJSON.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		OBJ_19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* Device.swift */,
+				OBJ_21 /* Network.swift */,
+				OBJ_22 /* PaywallEvents.swift */,
+				OBJ_23 /* StoreKitManager.swift */,
+				OBJ_24 /* Types.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Events.swift */,
+				OBJ_27 /* Paywall.swift */,
+				OBJ_28 /* SWPaywallViewController.swift */,
+				OBJ_29 /* ShimmerView */,
+				D3BC732B26F07EEE00F91C87 /* BundleFinder.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		OBJ_29 /* ShimmerView */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* Shimmer.swift */,
+				OBJ_31 /* ShimmeringLayer.swift */,
+				OBJ_32 /* ShimmeringMaskLayer.swift */,
+				OBJ_33 /* ShimmeringView.swift */,
+			);
+			path = ShimmerView;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* Cache.swift */,
+				OBJ_36 /* Dictionary+Cache.swift */,
+				OBJ_37 /* EventsQueue.swift */,
+				OBJ_38 /* Store.swift */,
+				OBJ_39 /* String+MD5.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		OBJ_40 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_41 /* PaywallTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_41 /* PaywallTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* PaywallTests.swift */,
+			);
+			name = PaywallTests;
+			path = Tests/PaywallTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_43 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_44 /* TPInAppReceipt 3.2.1 */,
+				OBJ_58 /* ASN1Swift 1.2.4 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_44 /* TPInAppReceipt 3.2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* TPInAppReceipt */,
+				OBJ_56 /* TPInAppReceipt-Objc */,
+				OBJ_57 /* Package.swift */,
+			);
+			name = "TPInAppReceipt 3.2.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_45 /* TPInAppReceipt */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_46 /* Data+Extension.swift */,
+				OBJ_47 /* Date+Extension.swift */,
+				OBJ_48 /* Extras.swift */,
+				OBJ_49 /* IARError.swift */,
+				OBJ_50 /* InAppPurchase.swift */,
+				OBJ_51 /* InAppReceipt+ASN1Decodable.swift */,
+				OBJ_52 /* InAppReceipt.swift */,
+				OBJ_53 /* InAppReceiptPayload.swift */,
+				OBJ_54 /* Initialization.swift */,
+				OBJ_55 /* Validation.swift */,
+			);
+			name = TPInAppReceipt;
+			path = .build/checkouts/TPInAppReceipt/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_40 /* Tests */,
+				OBJ_43 /* Dependencies */,
+				D35B72D026F0846B00322C6A /* PaywallAssets */,
+				OBJ_76 /* Products */,
+				OBJ_81 /* docs */,
+				OBJ_83 /* build */,
+				OBJ_84 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_56 /* TPInAppReceipt-Objc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "TPInAppReceipt-Objc";
+			path = .build/checkouts/TPInAppReceipt/Sources/Objc;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_58 /* ASN1Swift 1.2.4 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* ASN1Swift */,
+				OBJ_75 /* Package.swift */,
+			);
+			name = "ASN1Swift 1.2.4";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_59 /* ASN1Swift */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_60 /* ASN1Coder.swift */,
+				OBJ_61 /* ASN1Decoder+Extras.swift */,
+				OBJ_62 /* ASN1Decoder+KeyedDecodingContainer.swift */,
+				OBJ_63 /* ASN1Decoder+SingleValueContainer.swift */,
+				OBJ_64 /* ASN1Decoder+Unboxing.swift */,
+				OBJ_65 /* ASN1Decoder+UnkeyedDecodingContainer.swift */,
+				OBJ_66 /* ASN1Decoder+Utils.swift */,
+				OBJ_67 /* ASN1Decoder.swift */,
+				OBJ_68 /* ASN1Serialization.swift */,
+				OBJ_69 /* ASN1Templates.swift */,
+				OBJ_70 /* ASN1Types.swift */,
+				OBJ_71 /* DecodingError+Extensions.swift */,
+				OBJ_72 /* Foundation+ASN1Coder.swift */,
+				OBJ_73 /* PKCS7 */,
+			);
+			name = ASN1Swift;
+			path = .build/checkouts/ASN1Swift/Sources/ASN1Swift;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* Paywall */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_73 /* PKCS7 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_74 /* PKCS7.swift */,
+			);
+			path = PKCS7;
+			sourceTree = "<group>";
+		};
+		OBJ_76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */,
+				"Paywall::Paywall::Product" /* Paywall.framework */,
+				"Paywall::PaywallTests::Product" /* PaywallTests.xctest */,
+				"TPInAppReceipt::TPInAppReceipt::Product" /* TPInAppReceipt.framework */,
+				D35B72CF26F0846B00322C6A /* PaywallAssets.bundle */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_8 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				D3BC732A26F07E6C00F91C87 /* Assets.xcassets */,
+				OBJ_9 /* Debug */,
+				OBJ_14 /* Misc */,
+				OBJ_19 /* Network */,
+				OBJ_25 /* Paywall */,
+				OBJ_34 /* Store */,
+			);
+			name = Paywall;
+			path = Sources/Paywall;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* SWBounceButton.swift */,
+				OBJ_11 /* SWConsoleViewController.swift */,
+				OBJ_12 /* SWDebugManager.swift */,
+				OBJ_13 /* SWDebugViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"ASN1Swift::ASN1Swift" /* ASN1Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "ASN1Swift" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+				OBJ_104 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASN1Swift;
+			productName = ASN1Swift;
+			productReference = "ASN1Swift::ASN1Swift::Product" /* ASN1Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"ASN1Swift::SwiftPMPackageDescription" /* ASN1SwiftPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_106 /* Build configuration list for PBXNativeTarget "ASN1SwiftPackageDescription" */;
+			buildPhases = (
+				OBJ_109 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASN1SwiftPackageDescription;
+			productName = ASN1SwiftPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		D35B72CE26F0846B00322C6A /* PaywallAssets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D35B72D426F0846B00322C6A /* Build configuration list for PBXNativeTarget "PaywallAssets" */;
+			buildPhases = (
+				D35B72CB26F0846B00322C6A /* Sources */,
+				D35B72CC26F0846B00322C6A /* Frameworks */,
+				D35B72CD26F0846B00322C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaywallAssets;
+			productName = PaywallAssets;
+			productReference = D35B72CF26F0846B00322C6A /* PaywallAssets.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		"Paywall::Paywall" /* Paywall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_112 /* Build configuration list for PBXNativeTarget "Paywall" */;
+			buildPhases = (
+				OBJ_115 /* Sources */,
+				OBJ_141 /* Frameworks */,
+				D35B72D726F0864D00322C6A /* CopyFiles */,
+				D35B72D926F0870300322C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_144 /* PBXTargetDependency */,
+				OBJ_146 /* PBXTargetDependency */,
+			);
+			name = Paywall;
+			productName = Paywall;
+			productReference = "Paywall::Paywall::Product" /* Paywall.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Paywall::PaywallTests" /* PaywallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_159 /* Build configuration list for PBXNativeTarget "PaywallTests" */;
+			buildPhases = (
+				OBJ_162 /* Sources */,
+				OBJ_164 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_168 /* PBXTargetDependency */,
+				OBJ_169 /* PBXTargetDependency */,
+				OBJ_170 /* PBXTargetDependency */,
+			);
+			name = PaywallTests;
+			productName = PaywallTests;
+			productReference = "Paywall::PaywallTests::Product" /* PaywallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Paywall::SwiftPMPackageDescription" /* PaywallPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_148 /* Build configuration list for PBXNativeTarget "PaywallPackageDescription" */;
+			buildPhases = (
+				OBJ_151 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaywallPackageDescription;
+			productName = PaywallPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TPInAppReceipt::SwiftPMPackageDescription" /* TPInAppReceiptPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_189 /* Build configuration list for PBXNativeTarget "TPInAppReceiptPackageDescription" */;
+			buildPhases = (
+				OBJ_192 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TPInAppReceiptPackageDescription;
+			productName = TPInAppReceiptPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"TPInAppReceipt::TPInAppReceipt" /* TPInAppReceipt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "TPInAppReceipt" */;
+			buildPhases = (
+				OBJ_174 /* Sources */,
+				OBJ_185 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_187 /* PBXTargetDependency */,
+			);
+			name = TPInAppReceipt;
+			productName = TPInAppReceipt;
+			productReference = "TPInAppReceipt::TPInAppReceipt::Product" /* TPInAppReceipt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					D35B72CE26F0846B00322C6A = {
+						CreatedOnToolsVersion = 12.5.1;
+						DevelopmentTeam = 77ZLSHZ8HR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Paywall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"ASN1Swift::ASN1Swift" /* ASN1Swift */,
+				"ASN1Swift::SwiftPMPackageDescription" /* ASN1SwiftPackageDescription */,
+				"Paywall::Paywall" /* Paywall */,
+				"Paywall::SwiftPMPackageDescription" /* PaywallPackageDescription */,
+				"Paywall::PaywallPackageTests::ProductTarget" /* PaywallPackageTests */,
+				"Paywall::PaywallTests" /* PaywallTests */,
+				"TPInAppReceipt::TPInAppReceipt" /* TPInAppReceipt */,
+				"TPInAppReceipt::SwiftPMPackageDescription" /* TPInAppReceiptPackageDescription */,
+				D35B72CE26F0846B00322C6A /* PaywallAssets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D35B72CD26F0846B00322C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35B72DB26F0888F00322C6A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35B72D926F0870300322C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D35B72DA26F0870600322C6A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D35B72CB26F0846B00322C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_110 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_116 /* SWBounceButton.swift in Sources */,
+				OBJ_117 /* SWConsoleViewController.swift in Sources */,
+				OBJ_118 /* SWDebugManager.swift in Sources */,
+				OBJ_119 /* SWDebugViewController.swift in Sources */,
+				OBJ_120 /* Debug.swift in Sources */,
+				OBJ_121 /* Example.swift in Sources */,
+				OBJ_122 /* Extensions.swift in Sources */,
+				D3BC732C26F07EEE00F91C87 /* BundleFinder.swift in Sources */,
+				OBJ_123 /* SwiftyJSON.swift in Sources */,
+				OBJ_124 /* Device.swift in Sources */,
+				OBJ_125 /* Network.swift in Sources */,
+				OBJ_126 /* PaywallEvents.swift in Sources */,
+				OBJ_127 /* StoreKitManager.swift in Sources */,
+				OBJ_128 /* Types.swift in Sources */,
+				OBJ_129 /* Events.swift in Sources */,
+				OBJ_130 /* Paywall.swift in Sources */,
+				OBJ_131 /* SWPaywallViewController.swift in Sources */,
+				OBJ_132 /* Shimmer.swift in Sources */,
+				OBJ_133 /* ShimmeringLayer.swift in Sources */,
+				OBJ_134 /* ShimmeringMaskLayer.swift in Sources */,
+				OBJ_135 /* ShimmeringView.swift in Sources */,
+				OBJ_136 /* Cache.swift in Sources */,
+				OBJ_137 /* Dictionary+Cache.swift in Sources */,
+				OBJ_138 /* EventsQueue.swift in Sources */,
+				OBJ_139 /* Store.swift in Sources */,
+				OBJ_140 /* String+MD5.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_152 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_163 /* PaywallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_175 /* Data+Extension.swift in Sources */,
+				OBJ_176 /* Date+Extension.swift in Sources */,
+				OBJ_177 /* Extras.swift in Sources */,
+				OBJ_178 /* IARError.swift in Sources */,
+				OBJ_179 /* InAppPurchase.swift in Sources */,
+				OBJ_180 /* InAppReceipt+ASN1Decodable.swift in Sources */,
+				OBJ_181 /* InAppReceipt.swift in Sources */,
+				OBJ_182 /* InAppReceiptPayload.swift in Sources */,
+				OBJ_183 /* Initialization.swift in Sources */,
+				OBJ_184 /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_193 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* ASN1Coder.swift in Sources */,
+				OBJ_91 /* ASN1Decoder+Extras.swift in Sources */,
+				OBJ_92 /* ASN1Decoder+KeyedDecodingContainer.swift in Sources */,
+				OBJ_93 /* ASN1Decoder+SingleValueContainer.swift in Sources */,
+				OBJ_94 /* ASN1Decoder+Unboxing.swift in Sources */,
+				OBJ_95 /* ASN1Decoder+UnkeyedDecodingContainer.swift in Sources */,
+				OBJ_96 /* ASN1Decoder+Utils.swift in Sources */,
+				OBJ_97 /* ASN1Decoder.swift in Sources */,
+				OBJ_98 /* ASN1Serialization.swift in Sources */,
+				OBJ_99 /* ASN1Templates.swift in Sources */,
+				OBJ_100 /* ASN1Types.swift in Sources */,
+				OBJ_101 /* DecodingError+Extensions.swift in Sources */,
+				OBJ_102 /* Foundation+ASN1Coder.swift in Sources */,
+				OBJ_103 /* PKCS7.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TPInAppReceipt::TPInAppReceipt" /* TPInAppReceipt */;
+			targetProxy = D3BC730326F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_146 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ASN1Swift::ASN1Swift" /* ASN1Swift */;
+			targetProxy = D3BC730526F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_157 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Paywall::PaywallTests" /* PaywallTests */;
+			targetProxy = D3BC730926F079E800F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Paywall::Paywall" /* Paywall */;
+			targetProxy = D3BC730626F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_169 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "TPInAppReceipt::TPInAppReceipt" /* TPInAppReceipt */;
+			targetProxy = D3BC730726F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_170 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ASN1Swift::ASN1Swift" /* ASN1Swift */;
+			targetProxy = D3BC730826F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+		OBJ_187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ASN1Swift::ASN1Swift" /* ASN1Swift */;
+			targetProxy = D3BC730426F079E700F91C87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D35B72D226F0846B00322C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 77ZLSHZ8HR;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PaywallAssets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.superwall.PaywallAssets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D35B72D326F0846B00322C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 77ZLSHZ8HR;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = PaywallAssets/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.superwall.PaywallAssets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		OBJ_107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Sources/Paywall/Assets.xcassets;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/Paywall_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.superwall.Paywall;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Paywall;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = Sources/Paywall/Assets.xcassets;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/Paywall_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.superwall.Paywall;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Paywall;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_155 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/PaywallTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PaywallTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_161 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/PaywallTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = PaywallTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		OBJ_172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/TPInAppReceipt_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TPInAppReceipt;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TPInAppReceipt;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		OBJ_173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/TPInAppReceipt_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TPInAppReceipt;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TPInAppReceipt;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		OBJ_190 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/ASN1Swift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ASN1Swift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ASN1Swift;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Paywall.xcodeproj/ASN1Swift_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ASN1Swift;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ASN1Swift;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D35B72D426F0846B00322C6A /* Build configuration list for PBXNativeTarget "PaywallAssets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D35B72D226F0846B00322C6A /* Debug */,
+				D35B72D326F0846B00322C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_106 /* Build configuration list for PBXNativeTarget "ASN1SwiftPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_107 /* Debug */,
+				OBJ_108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_112 /* Build configuration list for PBXNativeTarget "Paywall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_113 /* Debug */,
+				OBJ_114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_148 /* Build configuration list for PBXNativeTarget "PaywallPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_149 /* Debug */,
+				OBJ_150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_154 /* Build configuration list for PBXAggregateTarget "PaywallPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_155 /* Debug */,
+				OBJ_156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_159 /* Build configuration list for PBXNativeTarget "PaywallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_160 /* Debug */,
+				OBJ_161 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_171 /* Build configuration list for PBXNativeTarget "TPInAppReceipt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_189 /* Build configuration list for PBXNativeTarget "TPInAppReceiptPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_190 /* Debug */,
+				OBJ_191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "Paywall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "ASN1Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
