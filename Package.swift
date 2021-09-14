@@ -28,8 +28,13 @@ let package = Package(
                 .product(name: "TPInAppReceipt", package: "TPInAppReceipt")
             ],
             swiftSettings: [
-                .unsafeFlags(["-emit-objc-header"])
-            ]),
+              .define("SPM")
+            ]
+//          ),
+//            swiftSettings: [
+//                .unsafeFlags(["-emit-objc-header"])
+//            ]
+        ),
         .testTarget(
             name: "PaywallTests",
             dependencies: ["Paywall"]),
