@@ -26,6 +26,9 @@ let package = Package(
             name: "Paywall",
             dependencies: [
                 .product(name: "TPInAppReceipt", package: "TPInAppReceipt")
+            ],
+            swiftSettings: [
+                .unsafeFlags(["-emit-objc-header"])
             ]),
         .testTarget(
             name: "PaywallTests",
