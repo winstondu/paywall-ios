@@ -6,7 +6,7 @@
 //
 import Foundation
 
-#if !SPM
+//#if !SPM
 private class BundleFinder {}
 extension Foundation.Bundle {
         /// Returns the resource bundle associated with the current Swift module.
@@ -31,4 +31,4 @@ extension Foundation.Bundle {
         }()
 }
 
-#endif
+//#endif

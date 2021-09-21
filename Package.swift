@@ -27,6 +27,10 @@ let package = Package(
             dependencies: [
                 .product(name: "TPInAppReceipt", package: "TPInAppReceipt")
             ],
+            resources: [
+                .copy("Sources/Paywall/Assets.xcassets")
+            ],
+        
             // A way to re-defined "Bundle.module" if using pods instead of SPM
             swiftSettings: [
               .define("SPM")

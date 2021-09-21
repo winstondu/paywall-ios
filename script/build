@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd "$(dirname "$0")/..
+
+rm -rf dist/
+mkdir -p dist/out
+
+xcodebuild -scheme Paywall -destination 'platform=iOS Simulator,name=iPhone 12' -derivedDataPath ./dist/derived  BUILD_LIBRARY_FOR_DISTRIBUTION=YES SKIP_INSTALL=NO build
+
+mv dist/derived/Build/Products/Debug-iphonesimulator/Paywall_Paywall.bundle  dist/out/
+
+cp script/BundleHelper.swift Sources/Paywall/
+
+swift create-xcframework Paywall ASN1Swift TPInAppReceipt
+
+mv  Paywall.xcframework dist/out
+mv  ASN1Swift.xcframework dist/out
+mv  TPInAppReceipt.xcframework dist/out
+
+zip -r build.zip dist/out
+
+rm -rf  Sources/Paywall/BundleHelper.swift
